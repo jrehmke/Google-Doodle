@@ -6,7 +6,7 @@
 */
 
 * {
-    outline: 1px dotted black;
+  outline: 1px dotted black;
 }
 
 /* Doodle Stage */
@@ -16,10 +16,14 @@
   width: 600px;
 }
 
-#heart1 {
-  fill: red;
+#art1 {
+  fill: mediumseagreen;
 }
 
-#heart2 {
-  fill: green;
+#clouds {
+  fill: white;
+}
+
+#text {
+  fill: white;
 }
