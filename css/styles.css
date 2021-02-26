@@ -17,14 +17,75 @@
 }
 
 .sky {
-  background: url("https://i.imgur.com/kHtGY1k.png");
+  
   position: relative;
   height: 300px;
   width: 600px;
+  animation: dayCycle 60s linear infinite;
+}
+@keyframes dayCycle {
+  0% {
+    background: url("https://i.imgur.com/kHtGY1k.png");
+  }
+  13%{
+    background: url("https://i.imgur.com/6g1xcru.png");
+  }
+  20%{
+    background: url("https://i.imgur.com/EZbv955.png");
+  }
+  25% {
+    background: url("https://i.imgur.com/5x3XTrZ.png"); 
+  }
+  50% {
+    background: url("https://i.imgur.com/tBHJzgm.png");
+  }
+  
+  75% {
+    background: url("https://i.imgur.com/5x3XTrZ.png");
+  }
+  80%{
+    background: url("https://i.imgur.com/EZbv955.png");
+  }
+  87%{
+    background: url("https://i.imgur.com/6g1xcru.png");
+  }
+  100% {
+    background: url("https://i.imgur.com/kHtGY1k.png"); 
+  }
 }
 
 .clouds {
-  fill: white;
+  animation: cloudCycle 60s linear infinite;
+}
+@keyframes cloudCycle {
+  0% {
+    fill:white
+  }
+  13% {
+    fill:rgb(255, 251, 241)
+  }
+  20% {
+    fill:#fff1de
+  }
+  25% {
+    fill:#FFEAD1
+  }
+  50% {
+    fill:#5767A0
+  }
+  
+  75% {
+    fill:#FFEAD1
+  }
+  80% {
+    fill:#fff1de
+  }
+  87% {
+    fill:rgb(253, 219, 246)
+  }
+  100% {
+    fill:white;
+  }
 }
 .clouds #cloud1 {
   animation: slide1 23s linear infinite;
