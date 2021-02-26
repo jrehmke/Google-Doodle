@@ -5,7 +5,7 @@
   * Outline Elements
 */
 
-* {
+/* {
   outline: 1px dotted black;
 }
 
@@ -16,14 +16,100 @@
   width: 600px;
 }
 
-#art1 {
-  fill: mediumseagreen;
+.sky {
+  background: url("https://i.imgur.com/kHtGY1k.png");
+  position: relative;
+  height: 300px;
+  width: 600px;
 }
 
-#clouds {
+.clouds {
   fill: white;
+}
+.clouds #cloud1 {
+  animation: slide1 23s linear infinite;
+}
+@keyframes slide1 {
+  0% {
+    transform: translate(700px, 10px);
+  }
+  100% {
+    transform: translate(-300px, 10px);
+  }
+}
+.clouds #cloud2 {
+  animation: slide2 10s linear infinite;
+}
+@keyframes slide2 {
+  0% {
+    transform: translate(350px, 0);
+  }
+  100% {
+    transform: translate(-550px, 0);
+  }
+}
+
+.clouds #cloud3 {
+  animation: slide3 15s linear infinite;
+}
+@keyframes slide3 {
+  0% {
+    transform: translate(350px, 0);
+  }
+  100% {
+    transform: translate(-600px, 0);
+  }
 }
 
 #text {
   fill: white;
+}
+
+#art1 {
+  fill: mediumseagreen;
+  opacity: 0;
+  width: 80px;
+  position: absolute;
+  left: 223px;
+  top: 120px;
+  filter: drop-shadow(0px 0px 20px rgb(0, 255, 115));
+}
+
+#art2 {
+  opacity: 0;
+  width: 80px;
+  position: absolute;
+  left: 223px;
+  top: 120px;
+}
+
+#art3 {
+  opacity: 0;
+  width: 80px;
+  position: absolute;
+  left: 223px;
+  top: 120px;
+}
+#art4 {
+  opacity: 0;
+  width: 80px;
+  position: absolute;
+  left: 223px;
+  top: 120px;
+}
+
+.arts {
+  animation: animation 3s ease;
+}
+
+@keyframes animation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
