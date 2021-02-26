@@ -65,6 +65,24 @@
   fill: white;
 }
 
+.ether {
+  fill: #31c5f4;
+  animation: etherGlow 5s linear infinite;
+}
+
+@keyframes etherGlow {
+  0% {
+    fill: #31c5f4;
+  }
+  50% {
+    fill: #c1f1ff;
+    filter: drop-shadow(0px 0px 20px rgb(93, 250, 255)));
+  }
+  100% {
+    fill: #31c5f4;
+  }
+}
+
 #art1 {
   fill: mediumseagreen;
   opacity: 0;
@@ -73,29 +91,6 @@
   left: 223px;
   top: 120px;
   filter: drop-shadow(0px 0px 20px rgb(0, 255, 115));
-}
-
-#art2 {
-  opacity: 0;
-  width: 80px;
-  position: absolute;
-  left: 223px;
-  top: 120px;
-}
-
-#art3 {
-  opacity: 0;
-  width: 80px;
-  position: absolute;
-  left: 223px;
-  top: 120px;
-}
-#art4 {
-  opacity: 0;
-  width: 80px;
-  position: absolute;
-  left: 223px;
-  top: 120px;
 }
 
 .arts {
