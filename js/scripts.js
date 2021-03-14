@@ -1,5 +1,3 @@
-// This changes everything
-
 // retrieve the element
 var element = document.getElementById("art1");
 
@@ -21,3 +19,7 @@ element.addEventListener(
   },
   false
 );
+
+gsap.fromTo(".cloud-1", {x: 700}, {x: -225, ease: "none", duration: 20,  repeat: -1});
+gsap.fromTo(".cloud-2", {x: 500}, {x: -550, ease: "none", duration: 30,  repeat: -1});
+gsap.fromTo(".cloud-3", {x: 400}, {x: -600, ease: "none", duration: 15,  repeat: -1});

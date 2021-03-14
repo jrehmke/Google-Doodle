@@ -11,116 +11,107 @@
 
 /* Doodle Stage */
 #stage {
-  background: #ccc;
   height: 300px;
   width: 600px;
 }
 
 .sky {
-  
   position: relative;
   height: 300px;
   width: 600px;
-  animation: dayCycle 60s linear infinite;
+  background: url("https://i.imgur.com/kHtGY1k.png");
+  animation: dayCycle 60s linear 10s infinite;
 }
+
 @keyframes dayCycle {
   0% {
     background: url("https://i.imgur.com/kHtGY1k.png");
   }
-  13%{
+  13% {
     background: url("https://i.imgur.com/6g1xcru.png");
   }
-  20%{
+  20% {
     background: url("https://i.imgur.com/EZbv955.png");
   }
   25% {
-    background: url("https://i.imgur.com/5x3XTrZ.png"); 
+    background: url("https://i.imgur.com/5x3XTrZ.png");
+  }
+  40% {
+    background: url("https://i.imgur.com/5x3XTrZ.png");
   }
   50% {
     background: url("https://i.imgur.com/tBHJzgm.png");
   }
-  
+  65% {
+    background: url("https://i.imgur.com/tBHJzgm.png");
+  }
   75% {
     background: url("https://i.imgur.com/5x3XTrZ.png");
   }
-  80%{
+  80% {
     background: url("https://i.imgur.com/EZbv955.png");
   }
-  87%{
+  87% {
     background: url("https://i.imgur.com/6g1xcru.png");
   }
   100% {
-    background: url("https://i.imgur.com/kHtGY1k.png"); 
+    background: url("https://i.imgur.com/kHtGY1k.png");
   }
 }
 
 .clouds {
-  animation: cloudCycle 60s linear infinite;
+  fill: white;
+  animation: cloudCycle 60s linear 10s infinite;
 }
 @keyframes cloudCycle {
   0% {
-    fill:white
+    fill: white;
   }
   13% {
-    fill:rgb(255, 251, 241)
+    fill: rgb(255, 251, 241);
   }
   20% {
-    fill:#fff1de
+    fill: #fff1de;
   }
   25% {
-    fill:#FFEAD1
+    fill: #ffead1;
+  }
+  40% {
+    fill: #ffead1;
   }
   50% {
-    fill:#5767A0
+    fill: #5767a0;
   }
-  
+  65% {
+    fill: #5767a0;
+  }
   75% {
-    fill:#FFEAD1
+    fill: #ffead1;
   }
   80% {
-    fill:#fff1de
+    fill: #fff1de;
   }
   87% {
-    fill:rgb(255, 251, 241)
+    fill: rgb(255, 251, 241);
   }
   100% {
-    fill:white;
-  }
-}
-.clouds #cloud1 {
-  animation: slide1 23s linear infinite;
-}
-@keyframes slide1 {
-  0% {
-    transform: translate(700px, 10px);
-  }
-  100% {
-    transform: translate(-300px, 10px);
-  }
-}
-.clouds #cloud2 {
-  animation: slide2 10s linear infinite;
-}
-@keyframes slide2 {
-  0% {
-    transform: translate(350px, 0);
-  }
-  100% {
-    transform: translate(-550px, 0);
+    fill: white;
   }
 }
 
+.cloud-1 {
+}
+
+
+
+.clouds #cloud2 {
+  
+}
+
 .clouds #cloud3 {
-  animation: slide3 15s linear infinite;
+  
 }
-@keyframes slide3 {
-  0% {
-    transform: translate(350px, 0);
-  }
-  100% {
-    transform: translate(-600px, 0);
-  }
-}
+
 
 #text {
   fill: white;
@@ -128,6 +119,7 @@
 
 .ether {
   fill: #31c5f4;
+  filter: drop-shadow(0px 0px 5px rgb(168, 219, 235));
   animation: etherGlow 5s linear infinite;
 }
 
@@ -136,8 +128,7 @@
     fill: #31c5f4;
   }
   50% {
-    fill: #c1f1ff;
-    filter: drop-shadow(0px 0px 20px rgb(93, 250, 255)));
+    fill: #ddf7ff;
   }
   100% {
     fill: #31c5f4;
@@ -155,10 +146,10 @@
 }
 
 .arts {
-  animation: animation 3s ease;
+  animation: artAppear 3s ease;
 }
 
-@keyframes animation {
+@keyframes artAppear {
   0% {
     opacity: 0;
   }
@@ -167,5 +158,38 @@
   }
   100% {
     opacity: 0;
+  }
+}
+
+#logo {
+  position: absolute;
+  opacity: 0;
+  width: 25%;
+  left: 430px;
+  top: 230px;
+  filter: brightness(0) invert(1);
+  animation: logoFade 2s ease-in 11s forwards;
+}
+
+@keyframes logoFade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#monado {
+  transform: translateY(475px);
+  animation: slideIn 8s ease-in-out 3s forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(475px);
+  }
+  100% {
+    transform: translateY(0px);
   }
 }
